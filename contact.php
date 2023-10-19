@@ -90,8 +90,6 @@ $data = json_decode(file_get_contents('core/storage/data.json'), 1);
 
 <?php include('core/common/footer.php'); ?>
 
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/parallax.min.js"></script>
 <script>
   $(document).ready(function () {
 	var acc = document.getElementsByClassName("accordion");
