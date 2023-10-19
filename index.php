@@ -8,10 +8,6 @@ $data = json_decode(file_get_contents('core/storage/data.json'), 1);
 <?php include('core/common/navbar.php'); ?>
 
 <main>
-    <header class="row tm-welcome-section">
-        <h2 class="col-12 text-center tm-section-title"><?=$data['pageIntroduction']?></h2>
-        <p class="col-12 text-center"><?=$data['pageDescription']?></p>
-    </header>
     <div class="row tm-gallery">
 			<header class="row tm-welcome-section">
 				<h2 class="col-12 text-center tm-section-title"><?=$data['pageIntroduction']?></h2>
