@@ -4,13 +4,13 @@ session_start();
 $data = json_decode(file_get_contents( '../core/storage/data.json'),1);
 
 
-if ($_POST['loginForm']) {
+if (isset($_POST['loginForm'])) {
     if ($_POST['user'] === 'admin' && $_POST['pass'] === '12345') {
         $_SESSION['user'] = 'ok';
     }
 }
 
-if ($_POST['saveForm']) {
+if (isset($_POST['saveForm'])) {
     $data['pageTitle'] = $_POST['pageTitle'];
     $data['pageIntroduction'] = $_POST['pageIntroduction'];
     $data['pageDescription'] = $_POST['pageDescription'];
@@ -36,7 +36,7 @@ if ($_POST['saveForm']) {
     file_put_contents('../core/storage/data.json', json_encode($data, JSON_PRETTY_PRINT));
 }
 
-if ($_SESSION['user']) {
+if (isset($_SESSION['user'])) {
     include 'template/data.php';
 } else {
     include 'template/login.php';
